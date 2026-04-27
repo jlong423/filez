@@ -19,7 +19,7 @@ async function seed() {
     for (let j = 0; j < 5; j++) {
       const file = {
         name: faker.system.commonFileName(),
-        size: Number(faker.number.bigInt()),
+        size: faker.number.int({ max: 100000 }),
         folder_id: createdFolder.id,
       };
 
